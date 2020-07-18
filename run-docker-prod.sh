@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose -p ricimon_com-dev -f docker-compose.prod.yml up -d
+docker-compose -p ricimon_com-prod up -d
