@@ -1,5 +1,5 @@
 FROM node:15.2-alpine
-WORKDIR /src
+WORKDIR /app
 COPY package.json yarn.lock .yarnrc ./
 RUN yarn install
 CMD ["yarn", "start"]
