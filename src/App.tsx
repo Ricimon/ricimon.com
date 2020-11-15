@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import githubIcon from './res/github-icon.svg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-main">
+        <h1><span>
+          Hi! I'm <span className="Decorated-below" data-content="(ree-see-mon)">Ricimon</span>
+        </span></h1>
+        <h3>Welcome to my construction zone. 🚧</h3>
+      </div>
+      <div className="Social-icons">
+        <a href="https://github.com/ricimon" target="_blank" rel="noopener noreferrer"><img src={githubIcon} className="Social-icon" alt="github" /></a>
+      </div>
     </div>
   );
 }
