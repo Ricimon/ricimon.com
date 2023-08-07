@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose -p ricimon_com-prod down
+docker compose -p ricimon_com-prod down
