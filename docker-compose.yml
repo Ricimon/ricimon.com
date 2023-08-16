@@ -7,5 +7,7 @@ services:
       dockerfile: Dockerfile.prod
     container_name: "ricimon.com-prod"
     restart: unless-stopped
+    expose:
+      - "80"
     ports:
       - "8000:80"
