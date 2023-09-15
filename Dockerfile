@@ -5,7 +5,6 @@ RUN npm install -g gatsby-cli
 COPY package*.json ./
 RUN apk add --no-cache --virtual g++ make py3-pip
 RUN npm install --omit=dev
-RUN apk del .gyp
 
 COPY . .
 RUN gatsby build
