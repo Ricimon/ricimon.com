@@ -1,7 +1,8 @@
-import {graphql} from 'gatsby';
+import * as React from 'react';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
-import React from 'react';
+import { graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
 
 import userConfig from '../../config';
 
@@ -20,6 +21,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const author = get(this.props, 'data.site.siteMetadata.author');
+    const featuredImg = getImage(post.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData);
     const { previous, next } = this.props.pageContext;
 
     let url = '';
@@ -41,10 +43,8 @@ class BlogPostTemplate extends React.Component {
           </Helmet>
           <Card>
             <ArticleHeader>
-              {post.frontmatter.featuredImage && (
-                <FeaturedImage
-                  sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-                />
+              {featuredImg && (
+                <FeaturedImage image={featuredImg} />
               )}
               <h1>{post.frontmatter.title}</h1>
               <p>{post.frontmatter.date}</p>
@@ -60,13 +60,13 @@ class BlogPostTemplate extends React.Component {
 
           <PageNav>
             {previous && (
-              <Button to={previous.fields.slug} rel="prev">
+              <Button to={previous.frontmatter.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Button>
             )}
 
             {next && (
-              <Button to={next.fields.slug} rel="next">
+              <Button to={next.frontmatter.slug} rel="next">
                 {next.frontmatter.title} →
               </Button>
             )}
@@ -80,24 +80,21 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 850) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 1920)
           }
         }
       }

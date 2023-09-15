@@ -1,12 +1,12 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Wrapper from './Wrapper';
 
-function FeaturedImage({ sizes }) {
+function FeaturedImage({ image }) {
   return (
     <Wrapper>
-      <Img sizes={sizes} alt="" />
+      <GatsbyImage image={image} alt="" />
     </Wrapper>
   );
 }

@@ -10,8 +10,6 @@ import Container from '../components/Container';
 import Pagination from '../components/Pagination';
 import Summary from '../components/Summary';
 
-import styled from 'styled-components';
-
 const IndexPage = ({ pageContext }) => {
   const { group, index, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
@@ -29,13 +27,13 @@ const IndexPage = ({ pageContext }) => {
           />
         </Helmet>
         {group.map(({ node }) => (
-          <Card key={node.fields.slug}>
+          <Card key={node.frontmatter.slug}>
             <Summary
               date={node.frontmatter.date}
               title={node.frontmatter.title}
               excerpt={node.excerpt}
-              image={node.frontmatter.featuredImage}
-              slug={node.fields.slug}
+              image={node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData}
+              slug={node.frontmatter.slug}
             />
           </Card>
         ))}

@@ -1,6 +1,12 @@
+import Helmet from 'react-helmet';
 import React from 'react';
 import styled from 'styled-components';
 
+import userConfig from '../../config';
+
+import Layout from '../templates/layout';
+
+import Container from '../components/Container';
 import H2 from '../components/H2';
 
 const Wrapper = styled.div`
@@ -9,9 +15,22 @@ const Wrapper = styled.div`
 
 function NotFound() {
   return (
-    <Wrapper>
-      <H2>Sorry, that page was not found.</H2>
-    </Wrapper>
+    <Layout>
+      <Container>
+        <Helmet
+          title={`${userConfig.title} | ${userConfig.author}`}
+          htmlAttributes={{ lang: 'en' }}
+        >
+          <meta
+            name="description"
+            content={`${userConfig.title} | ${userConfig.description}`}
+          />
+        </Helmet>
+        <Wrapper>
+          <H2>Sorry, that page was not found.</H2>
+        </Wrapper>
+      </Container>
+    </Layout>
   );
 }
 

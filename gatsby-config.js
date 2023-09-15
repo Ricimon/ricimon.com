@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
         name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -24,7 +24,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 700,
+              maxWidth: 1920,
               linkImagesToOriginal: false,
               wrapperStyle: 'margin: 15px -30px !important',
             },
@@ -41,7 +41,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-feed`,
@@ -96,6 +96,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -106,6 +107,7 @@ module.exports = {
         theme_color: userConfig.primaryColor,
         display: 'minimal-ui',
         icon: 'src/main.png',
+        include_favicon: false,
       },
     },
     `gatsby-plugin-offline`,
