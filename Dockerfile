@@ -1,9 +1,8 @@
-FROM node:20-alpine AS builder
+FROM node:20 AS builder
 WORKDIR /site
 
 RUN npm install -g gatsby-cli
 COPY package*.json ./
-RUN apk add --no-cache --virtual g++ make py3-pip
 RUN npm install --omit=dev
 
 COPY . .
