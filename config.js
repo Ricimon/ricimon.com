@@ -7,10 +7,10 @@ module.exports = {
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    website: 'https://ricimon.com',
+    website: 'https://www.ricimon.com',
     github: 'https://github.com/Ricimon',
     twitter: 'https://twitter.com/Ricimon',
     linkedin: 'https://linkedin.com/in/ericqu1',
   },
-  siteUrl: 'https://ricimon.com',
+  siteUrl: 'https://www.ricimon.com',
 };

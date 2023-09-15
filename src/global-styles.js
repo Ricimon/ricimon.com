@@ -46,7 +46,12 @@ const GlobalStyle = createGlobalStyle`
 
   pre[class*="language-"] {
     background: rgba(245, 245, 245, 1);
-    color: rgb(65, 76, 94);  }
+    color: rgb(65, 76, 94);  
+  }
+
+  code[class*="language-"] {
+    white-space: pre-wrap;
+  }
 
   @media only screen and (max-width: 870px) {
     .gatsby-highlight {

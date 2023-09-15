@@ -1,7 +1,7 @@
 ---
 slug: "/welcome-to-the-blog"
 title: Welcome to the Blog!
-date: "2023-09-14"
+date: "2023-09-15"
 featuredImage: './welcome2.png'
 ---
 
@@ -29,9 +29,17 @@ This website's code will remain uploaded to my GitHub repo over at https://githu
 
 ## Hosting the site
 
-Out of curiosity, I wanted to learn exactly how websites and web-servers work, so I didn't go with a one-click deployment solution for this site. I won't say too much more on this topic though, because this can get a little sensitive security-wise. However, I have gotten a lot of understanding of web-hosting concepts such as reverse proxies, dynamic DNS, and SSL encryption to get this website hosted.
+From my learnings setting up the Escality website, I thought I'd host this website on some personal hardware. More specifically, I have this spare Raspberry Pi that I host my various 24/7 Discord bots on. Unfortunately, I couldn't get the Gatsby build process to work, with the `npm run build` command always failing on
 
-Oh also, I love Docker ❤️
+```
+Error: No prebuild or local build of @parcel/watcher found. Tried @parcel/watcher-linux-arm-glibc.
+```
+
+My hunch is that this package isn't supported on the old ARMv7 architecture that my Pi is running on. This would explain why the build fails on my Pi but not on my PC, even though the same Dockerfile is being used between them.
+
+So, I turned to using [Netlify](https://www.netlify.com/) to deploy my site. I found this through the original dev-blog template, and it was pretty easy! I simply connected my GitHub repo to Netlify, and they quickly deployed my site to a Netlify subdomain. I then tweaked some DNS settings from my DNS provider to point my domains to Netlify, and just like that my site was set up, with SSL support too!
+
+Personally though, I'd prefer if I could keep small apps and deployments on local hardware, to either avoid cloud costs or just to learn lower level concepts behind their setup. Maybe I should invest in a newer model Pi 😅
 
 ## What's with the post image?
 
