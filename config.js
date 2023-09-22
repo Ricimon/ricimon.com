@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Dev Blog', // Required
   author: 'Eric Qu', // Required
+  authorDescription: 'aka Ricimon (ree-see-mon)',
   description: 'XR Software Engineer, random stuff maker',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
