@@ -10,7 +10,9 @@ The GatsbyJS CLI can be installed locally by running the command `npm install --
 
 #### 2. Install project dependencies
 
-Simply run `npm install` in the project.
+Globally install yarn `npm install --global yarn`
+
+Run `yarn` in the project.
 
 #### 3. Run the server locally
 
