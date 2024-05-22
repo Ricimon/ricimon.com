@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Dev Blog', // Required
-  author: 'Eric Qu', // Required
-  authorDescription: 'aka Ricimon (ree-see-mon)',
+  author: 'Ricimon', // Required
+  authorDescription: '(ree-see-mon)',
   description: 'XR Software Engineer, random stuff maker',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
@@ -11,7 +11,6 @@ module.exports = {
     website: 'https://www.ricimon.com',
     github: 'https://github.com/Ricimon',
     twitter: 'https://twitter.com/Ricimon',
-    linkedin: 'https://linkedin.com/in/ericqu1',
   },
   siteUrl: 'https://www.ricimon.com',
 };
