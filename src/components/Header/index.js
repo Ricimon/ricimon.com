@@ -26,6 +26,7 @@ function Header({ config }) {
           <Social
             github={social.github}
             twitter={social.twitter}
+            bluesky={social.bluesky}
           />
         }
       </Wrapper>

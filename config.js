@@ -11,6 +11,7 @@ module.exports = {
     website: 'https://www.ricimon.com',
     github: 'https://github.com/Ricimon',
     twitter: 'https://twitter.com/Ricimon',
+    bluesky: 'https://bsky.app/profile/ricimon.bsky.social',
   },
   siteUrl: 'https://www.ricimon.com',
 };
