@@ -179,6 +179,8 @@ public void AddPlaybackSample(string channelName, WaveInEventArgs sample)
 
 And that's about all the technical details I wanted to point out! There's some monitoring I've set up for the signaling server and TURN server using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/), but they're mostly using common setup settings. Maybe I'll write another post about them if I do more fancy things with them. My work developing this plugin is not done yet, so things might work differently when you read this post. However, all my code's open source and you can find it on my [GitHub](https://github.com/Ricimon/FFXIV-ProximityVoiceChat), along with instructions for installation if you play FFXIV and want to try it out for yourself. Here's also a quick [demo clip](https://x.com/UnityXIV/status/1887962272859029925) I launched an open-beta version of the plugin with.
 
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">FFXIV ProximityVoiceChat open beta is here! I&#39;m doing a sort of soft launch for anyone interested in trying my plugin out. Install instructions are found here: <a href="https://t.co/DDMKjJUVfY">https://t.co/DDMKjJUVfY</a> and I&#39;ve opened up my dev discord here: <a href="https://t.co/ASEduIjUhG">https://t.co/ASEduIjUhG</a> <a href="https://t.co/AqnBu5lXbk">pic.twitter.com/AqnBu5lXbk</a></p>&mdash; Unity XIV (@UnityXIV) <a href="https://twitter.com/UnityXIV/status/1887962272859029925?ref_src=twsrc%5Etfw">February 7, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Thanks for reading! 😄
 
 
