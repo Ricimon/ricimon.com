@@ -350,6 +350,6 @@ Other fine-tuned models include ones specifically for translation, or medical, e
 
 # Closing Thoughts
 
-This article is the result of about 2 weeks of fiddling with local AI setup and worrying about my electricity bill. I'm still sticking the AI on random little projects to evaluate its capabilities, and slowly making improvements to my cptr fork. I'm aware AI usage itself is a hot topic especially in the gaming sphere, so I'm being extra conscious of where and how I'm applying this technology. If you're familiar with my FFXIV plugin work, I'll aim to keep unchecked AI meddling out of the core codebase.
+This article is the result of about 2 weeks of fiddling with local AI setup and worrying about my electricity bill. I'm still sticking the AI on random little projects to evaluate its capabilities, and slowly making improvements to my [cptr fork](https://github.com/Ricimon/open-webui-computer). I'm aware AI usage itself is a hot topic especially in the gaming sphere, so I'm being extra conscious of where and how I'm applying this technology. If you're familiar with my FFXIV plugin work, I'll aim to keep unchecked AI meddling out of the core codebase.
 
 I hope this article was informative, and thank you for reading! This space moves fast so hopefully the things I've covered don't go obsolete too fast (or I'll just write a followup article). I'm honestly still figuring out this stuff out, but I'm optimistic that local AI will come to suit the needs of most people.
