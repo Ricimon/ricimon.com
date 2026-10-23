@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import userConfig from '../../../config';
 
 const Article = styled.article`
-  color: #65738c;
+  color: #5d6a81;
   font-size: 16px;
 
   a {
